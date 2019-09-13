@@ -1,0 +1,8 @@
+{
+  "layout": "Grid",
+  "rdbmsId": "b9fced2f-2c07-48f5-a005-7722575879f6",
+  "hidden": false,
+  "insightName": "Show first 500 records from MOVIE2",
+  "recipe": "AddPanel(0);Panel(0)|SetPanelView(\"visualization\");CreateFrame(grid).as([FRAME]);Database(\"1e4c33f9-a7b7-48ed-aa89-e1546591f5bf\") | Select(MOVIE2__RottenTomatoesAudience, MOVIE2__RottenTomatoesCritics, MOVIE2__Comments, MOVIE2__Director, MOVIE2__MovieBudget, MOVIE2__RevenueDomestic, MOVIE2__Title, MOVIE2__Genre, MOVIE2__RevenueInternational, MOVIE2__MOVIE2_UNIQUE_ROW_ID, MOVIE2__Studio, MOVIE2__Nominated) | Limit(500) | Import();Frame() | Select(RottenTomatoesAudience, RottenTomatoesCritics, Comments, Director, MovieBudget, RevenueDomestic, Title, Genre, RevenueInternational, MOVIE2_UNIQUE_ROW_ID, Studio, Nominated) | Format ( type \u003d [ \u0027table\u0027 ] ) | TaskOptions({\"0\":{\"layout\":\"Grid\",\"alignment\":{\"label\":[\"RottenTomatoesAudience\", \"RottenTomatoesCritics\", \"Comments\", \"Director\", \"MovieBudget\", \"RevenueDomestic\", \"Title\", \"Genre\", \"RevenueInternational\", \"MOVIE2_UNIQUE_ROW_ID\", \"Studio\", \"Nominated\"]}}}) | Collect(500);",
+  "engineId": "1e4c33f9-a7b7-48ed-aa89-e1546591f5bf"
+}
